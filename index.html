@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lão Đại Shop — Facebook đủ loại</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="static/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">
+      <div class="logo" onclick="window.location.href='index.html';" style="cursor:pointer;">
+        <div class="mark">LĐ.s</div>
+        <div><strong style="color: #93f8ff; font-size: 30px;">Lão Đại</strong> Shop</div>
+      </div>
+      <div class="search">
+        <input id="searchInput" placeholder="Tìm sản phẩm bạn đang cần..." />
+        <button id="searchBtn">Tìm</button>
+      </div>
+      <div class="actions">
+        <a href="#"><button class="icon-btn">Số dư 💰: 0đ</button></a>
+        <a href="naptien.html"><button class="icon-btn">👉🏻Nạp tiền 💵</button></a>
+        <button class="icon-btn">Chờ xử lý (0)</button>
+        <button class="icon-btn">Đã mua (0)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="columns">
+      <aside>
+        <div class="categories">
+          <h4 style="margin:0 0 8px 0">Sản phẩm</h4>
+          <div class="cat" data-cat="Acc Facebook"><img src="picture/logo_accfacebook.png" alt="">Acc Facebook</div>
+          <div class="cat" data-cat="BM Facebook"><img src="picture/logo_bmfacebook.png" alt="">BM Facebook</div>
+          <div class="cat" data-cat="TKQC Facebook"><img src="picture/logo_adsfacebook.png" alt="">TKQC Facebook</div>
+          <div class="cat" data-cat="Acc Google"><img src="picture/logo_gmail.png" alt="">Acc Google</div>
+          <div class="cat" data-cat="Acc Zalo"><img src="picture/logo_zalo.png" alt="">Acc Zalo</div>
+        </div>
+        <div class="categories1" style="margin-top: 20px;">
+          <h4 style="margin:0 0 8px 0">✅ Chính sách bảo hành</h4>
+          <div class="cat1">👉🏻 Tất cả TK bảo hành login.</div>
+          <div class="cat1">👉🏻 Tiền sau khi nạp vào tài khoản thì không thể rút ra, chỉ dùng để mua hàng.</div>
+          <div class="cat1">👉🏻 Sau khi thêm vào giỏ hàng, nếu báo không còn hàng vui lòng không click [ Mua ].</div>
+          <div class="cat1">👉🏻 Info tài khoản sẽ có trong tệp đính kèm khi mua, sẽ xóa trên hệ thống chúng tôi sau khi khách hàng đã mua.</div>
+          <div class="cat1">👉🏻 Tự tải xuống và lưu lại tệp cục bộ, không khiếu nại hoặc yêu cầu cung cấp lại tài khoản.</div>
+        </div>
+        <div class="categories1" style="margin-top: 20px;">
+          <h4 style="margin:0 0 8px 0">☎️ Thông tin liên hệ</h4>
+          <div class="cat1">⚡️zalo: 0965036037</div>
+          <div class="cat1">📱telegram: @Gabriel_7601</div>
+          <div class="cat1">📙FB: @muabanaccgiarevn</div>
+        </div>
+      </aside>
+      <section>
+        <div class="hero">
+          <div class="carousel" id="carousel">
+            <img src="picture/slide/facebook.jpg" alt="slide">
+            <div class="dots" id="dots"></div>
+          </div>
+
+          <div class="promo-cards">
+            <div class="promo"><div style="flex:1"><strong>Big Sale</strong><div style="font-size:13px;color:var(--muted)">Chương trình Giảm giá lớn</div></div><div>🔥</div></div>
+            <div class="promo"><div style="flex:1"><strong>Đại lý Hợp tác</strong><div style="font-size:13px;color:var(--muted)">Với hoa hồng lên đến 35%</div></div><div>🤝</div></div>
+          </div>
+        </div>
+
+        <div class="products">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <h3 style="margin:0">Tất cả sản phẩm</h3>
+            <div style="color:#1a1a47;font-size:14px">Có tất cả <span id="count"></span> loại tài khoản</div>
+          </div>
+
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 Shop acc giá rẻ • Lão Đại shop</div>  
+        <div style="color:#263a64; font-weight: 600;">Liên hệ  • Chính sách bảo mật  • Điều khoản</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Chat GPT -->
+   <div id="chat-widget">
+      <div id="chat-button">💭</div>
+      <div id="chat-box">
+        <div id="chat-header">
+          <span style="font-weight: 700;">Hỗ trợ 💭</span>
+          <button id="close-chat">&times;</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
+          <button id="send-btn">Gửi</button>
+        </div>
+      </div>
+    </div>
+
+<script src="static/chatgpt.js"></script>
+
+  <!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span id="popup-close" class="popup-close">&times;</span>
+    <div id="popup-content"></div>
+  </div>
+</div>
+<div class="snow"></div>
+
+
+  <script src="static/web.js"></script>
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+    alert('Chức năng này đã bị vô hiệu hóa!');
+  }
+});
+
+  </script>
+</body>
+</html>
